@@ -1,0 +1,24 @@
+# .pre-commit-config.yaml
+
+repos:
+  # Standard Python Pre-Commit Hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0 # Or the latest stable version
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  # Red Hat Infosec Pre-Commit Hook
+  - repo: https://gitlab.cee.redhat.com/infosec-public/developer-workbench/tools.git #<-- VERIFY THIS REPO URL 
+    rev: main 
+    hooks:
+      - id: rh-pre-commit
+        # Add any necessary arguments here
+
+  # Red Hat Gitleaks Hook
+  - repo: https://gitlab.cee.redhat.com/infosec-public/developer-workbench/tools.git #<-- VERIFY THIS REPO URL
+    rev: main 
+    hooks:
+      - id: rh-gitleaks
+        # Add any necessary arguments here
